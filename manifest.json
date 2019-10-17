@@ -1,16 +1,21 @@
 {
 	"name": "RaidRedirector",
-	"version": "0.1.2",
-	"description": "Redirects without a refer=raid",
+	"version": "0.1.3",
+	"description": "Redirects without a '?referrer=raid'",
 	"permissions": [
 		"webRequest",
 		"*://twitch.tv/*", 
 		"*://www.twitch.tv/*",
-		"webRequestBlocking"
+		"webRequestBlocking",
+		"webNavigation",
+		"tabs"
 	],
 	"background": {"scripts":["redir.js"]},
-	"page_action": {
-		"default_popup": "popup.html"
+	"icons": {
+		"16": "images/R16.png",
+		"32": "images/R32.png",
+		"48": "images/R48.png",
+		"128": "images/R128.png"
 	},
 	"manifest_version": 2
 }
