@@ -1,0 +1,16 @@
+{
+	"name": "RaidRedirector",
+	"version": "0.1",
+	"description": "Redirects without a refer=raid",
+	"permissions": [
+		"webRequest",
+		"*://twitch.tv/*", 
+		"*://www.twitch.tv/*",
+		"webRequestBlocking"
+	],
+	"background": {"scripts":["redir.js"]},
+	"page_action": {
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 2
+}
