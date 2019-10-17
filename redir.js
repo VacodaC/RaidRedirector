@@ -4,6 +4,10 @@ var callback = function(info) {
 		{
 			redir = info.url.substring(0, info.url.length - 11);
 		}
+		if (info.url.includes("?referrer=raid"))
+		{
+			redir = info.url.substring(0, info.url.length - 14);
+		}
 		return {redirectUrl: redir};
 	};
 var filter = {urls: ['*://twitch.tv/*', '*://www.twitch.tv/*']};
