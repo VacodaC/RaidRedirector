@@ -6,3 +6,4 @@
       - Enforced https:// redirect.
       - Added author detail.
       - Replaced substring with .match.split.
+0.1.5 - Reverted .match.split with substring.
