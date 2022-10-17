@@ -1,19 +1,20 @@
 var filter = {urls: ['*://twitch.tv/*', '*://www.twitch.tv/*']};
 var specInfo = ['blocking'];
+var redirectPatterns = ['?referrer=raid'];
 var callbackOnRequest = function(info) {
 	var redir = info.url
-	if (info.url.includes("?referrer=raid"))
+	if (redirectPatterns.some(redirPattern => info.url.includes(redirPattern)))
 	{
-		redir = info.url.substring(0, info.url.length - 14);
+		redir = info.url.substring(0, info.url.indexOf("?"));
 	}
 	return {redirectUrl: redir};
 };
 chrome.webRequest.onBeforeRequest.addListener(callbackOnRequest, filter, specInfo);
 var callbackOnComplete = function(info){
 	var redir = info.url
-	if (info.url.includes("?referrer=raid"))
+	if (redirectPatterns.some(redirPattern => info.url.includes(redirPattern)))
 	{
-		redir = info.url.substring(0, info.url.length - 14);
+		redir = info.url.substring(0, info.url.indexOf("?"));
 	}
 	if(redir != info.url)
 	{
