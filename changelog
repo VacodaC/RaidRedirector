@@ -7,3 +7,4 @@
       - Added author detail.
       - Replaced substring with .match.split.
 0.1.5 - Reverted .match.split with substring.
+0.1.6 - Enhanced URL pattern matching & callback upon completion.
