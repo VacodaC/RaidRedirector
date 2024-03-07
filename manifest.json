@@ -1,7 +1,7 @@
 {
 	"name": "RaidRedirector",
-	"author": "VacodaC, Vacoda, VaccyC",
-	"version": "0.1.5",
+	"author": "VacodaC, Vacoda, VaccyC, FileGeist",
+	"version": "0.1.6",
 	"description": "Redirects without a '?referrer=raid'",
 	"content_security_policy": "default-src 'self'",
 	"permissions": [
